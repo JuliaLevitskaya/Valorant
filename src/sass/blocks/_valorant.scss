@@ -10,7 +10,7 @@
 }
 
 .valorant__header {
-    padding: 26px 30px;
+    padding: 26px 55px;
     background: #2d3236;
     display: flex;
     justify-content: space-between;
@@ -29,6 +29,7 @@
         }
     }
     .valorant__acc {
+        position: relative;
         margin-left: 260px;
         display: flex;
         &-nickname {
@@ -38,6 +39,17 @@
             text-align: center;
             color: var(--white);
             margin-left: 10px;
+            cursor: pointer;
+            &::after {
+                content: '';
+                position: absolute;
+                background-image: url('../img/Polygon.svg');
+                right: -22px;
+                top: 15px;
+                width: 7px;
+                height: 5px;
+                cursor: pointer;
+            }
         }
     }
 }
@@ -47,27 +59,162 @@
 }
 
 .valorant__field {
+    position: relative;
     background-image: url('../img/background.svg');
-    min-height: 800px;
+    min-height: 850px;
+    height: 1262px;
     padding: 120px 0 0 80px;
     // mix-blend-mode: multiply;
     &-info {
+        position: relative;
         background-color: var(--white);
-        padding: 50px 70px;
-        width: 700px;
+        padding: 50px 44px;
+        width: 848px;
         .valorant__field-info_title {
             font-weight: 500;
             font-size: 24px;
-            color: #1F2326;
+            color: var(--dirtygrey);
         }
         .valorant__field-info_subtitle {
             margin-top: 50px;
             margin-bottom: 50px;
             font-weight: 400;
             font-size: 16px;
-            color: #1F2326;
+            color: var(--dirtygrey);
             line-height: 15px;
             letter-spacing: 0.1em;
+        }
+        .valorant__field-img {
+            position: absolute;
+            left: -65px;
+            bottom: 0px;
+            width: 507px;
+        }
+    }
+    .valorant__character {
+        position: absolute;
+        z-index: 2;
+        width: 1112px;
+        right: -126px;
+        bottom: 0;
+    }
+    .valorant__character-name {
+        position: absolute;
+        width: 145px;
+        right: 25px;
+        top: 41px;
+    }
+    .valorant__character-info {
+        display: flex;
+        justify-content: flex-end;
+        .valorant__character-title {
+            font-weight: 600;
+            font-size: 24px;
+            color: var(--dirtygrey);
+        }
+        .valorant__character-subtitle {
+            font-weight: 500;
+            font-size: 14px;
+            color: var(--grey);
+            margin-top: 20px;
+            span {
+                font-weight: 600;
+                font-size: 14px;
+                color: var(--dirtygrey);
+            }
+        }
+        .valorant__character-slider {
+            margin-left: 150px;
+        }
+    }
+    .valorant__capabilities {
+        min-height: 212px;
+        padding: 20px 44px;
+        background: var(--dirtygrey);
+        width: 848px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .valorant__capabilities-field {
+            width: 287px;
+            text-align: center;
+            margin-right: 40px;
+            width: 287px;
+            .valorant__capabilities-title {
+                font-weight: 500;
+                font-size: 18px;
+                text-align: center;
+                color: var(--white);
+            }
+            .valorant__capabilities-subtitle {
+                font-weight: 400;
+                font-size: 10px;
+                text-align: center;
+                color: var(--white)
+            }
+            .valorant__capabilities-icon {
+                margin-bottom: 25px;
+            }
+        }
+    }
+    .valorant__store {
+        z-index: 3;
+        position: absolute;
+        margin-top: 120px;
+        left: -31px;
+        display: flex;
+        &-products {
+            position: relative;
+            width: 297px;
+            padding: 20px 30px 0 30px;
+            background: #F8F8F8;
+            border: 1px solid #1F2326;
+            margin-right: 50px;
+            border-radius: 20px 0 0 0;
+            .valorant__store-gun {
+                width: 244px;
+                top: 15px;
+                right: -49px;
+                position: absolute;
+            }
+        }
+        .valorant__store-field {
+            display: flex;
+            justify-content: space-between;
+        }
+        .valorant__store-title {
+            font-weight: 500;
+            font-size: 48px;
+            color: var(--grey);
+        }
+        .valorant__store-subtitle {
+            font-weight: 500;
+            font-size: 24px;
+            color: var(--dirtygrey);
+        }
+        .valorant__store-price {
+            position: relative;
+            font-weight: 500;
+            font-size: 24px;
+            color: var(--white);
+            margin-top: 100px;
+            margin-right: 26px;
+            background: #FF4656;
+            width: 116px;
+            height: 116px;
+            text-align: center;
+            &::before {
+                content: '';
+                position: absolute;
+                width: 20px;
+                height: 25px;
+                background-image: url('../img/coins.svg');
+                left: 0;
+            }
+        }
+        .valorant__store-descr {
+            margin-top: 40px;
+            width: 145px;
         }
     }
 }
